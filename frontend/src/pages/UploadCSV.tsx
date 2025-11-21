@@ -1,4 +1,4 @@
-import MonthlyTarget from "../components/ecommerce/MonthlyTarget";
+import MonthlyTarget from "../components/Dashboard/DashboardCsv";
 import PageMeta from "../components/common/PageMeta";
 
 export default function UploadCSV() {

@@ -1,4 +1,4 @@
-import StatisticsChart from "../../components/ecommerce/StatisticsChart";
+import StatisticsChart from "../../components/Dashboard/EquipStats";
 import PageMeta from "../../components/common/PageMeta";
 
 export default function FlowratePage() {
