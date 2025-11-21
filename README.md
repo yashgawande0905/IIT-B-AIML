@@ -109,11 +109,73 @@ Each analysis has a dedicated navigation page.
 
 ## 🚀 Getting Started
 
+### 🎨 Frontend Setup (React + Vite + Tailwind CSS)
+
+```bash
+cd frontend
+
+# Create a venv for frontend (optional but requested)
+python -m venv venv
+
+# Activate environment
+venv\Scripts\activate     # Windows
+
+# Install Node dependencies inside activated environment
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Frontend runs at:  
+👉 http://localhost:5173/
+
+
 ### 🔧 Backend Setup (Django)
+
 ```bash
 cd backend
+
+# Create backend virtual environment
 python -m venv venv
-venv\Scripts\activate   # Windows
+
+# Activate the environment
+venv\Scripts\activate     # Windows
+
+# Install backend dependencies
 pip install -r requirements.txt
+pip install reportlab     # required for PDF generation
+
+# Run backend server
 python manage.py migrate
 python manage.py runserver
+```
+
+Backend runs at:  
+👉 http://127.0.0.1:8000/
+
+
+### 🖥️ Desktop Setup (PyQt5 + Matplotlib + Requests)
+
+```bash
+cd desktop
+
+# Create desktop virtual environment
+python -m venv venv
+
+# Activate the environment
+venv\Scripts\activate     # Windows
+
+# Install desktop dependencies
+pip install PyQt5 PyQtWebEngine matplotlib requests
+
+# Install reportlab if your PyQt app uses PDF generation
+pip install reportlab
+
+# Run the desktop application
+python main.py
+```
+
+
+
+
