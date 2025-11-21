@@ -1,182 +1,119 @@
-🔬 IIT Bombay – Chemical Equipment Parameter Visualizer
-Hybrid Web + Desktop Application (React + Django + Tailwind CSS)
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/IIT_Bombay_Logo.svg" height="120" />
+</p>
 
-This project is a complete data visualization and analytics dashboard designed for chemical engineering datasets.
-Built as part of the IIT Bombay AI/ML program, it allows users to upload CSV files and instantly view:
+<h1 align="center">🔬 IIT Bombay – Chemical Equipment Parameter Visualizer</h1>
+<p align="center"><b>Hybrid Web + Desktop Application (React + Django + PyQt + Tailwind CSS)</b></p>
 
-Equipment type distribution
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-blue" />
+  <img src="https://img.shields.io/badge/Django-REST%20Framework-green" />
+  <img src="https://img.shields.io/badge/Tailwind-CSS-38BDF8" />
+  <img src="https://img.shields.io/badge/PyQt-Desktop%20App-41CD52" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow" />
+</p>
 
-Monthly flowrate, pressure, and temperature trends
+---
 
-Data quality scoring
+## 📸 Project Screenshot
 
-Summary statistics
+<p align="center">
+  <img src="Dashboard.png" width="90%" />
+</p>
 
-Interactive charts & tables
+---
 
-The project integrates a React + Tailwind CSS frontend with a Django REST Framework backend, customized on top of the TailAdmin template.
+## 📘 Overview
 
-📊 Features
-✔ CSV Upload (Chemical Equipment Dataset)
+The **Chemical Equipment Parameter Visualizer** is a complete data analytics and visualization system built as part of the **IIT Bombay AI/ML Program**.  
+It supports **both Web and Desktop versions**, providing seamless access for chemical engineers and researchers.
 
-Upload a CSV file containing equipment parameters such as:
+Users can upload CSV datasets, visualize equipment behavior, view statistical summaries, and analyze flowrate, pressure, and temperature trends.
 
-Flowrate
+---
 
-Pressure
+## 📊 Features
 
-Temperature
+### ✔ CSV Upload (Chemical Engineering Dataset)
+Upload files containing:
+- Flowrate  
+- Pressure  
+- Temperature  
+- Timestamp  
+- Equipment Type  
 
-Timestamp
+Automatic data cleaning + validation.
 
-Equipment Type
+---
 
-The system automatically processes and cleans the data.
+### ✔ Real-Time Summary Statistics
+Includes:
+- Total & valid rows  
+- Missing/invalid entries  
+- Mean values of parameters  
+- Equipment type distribution  
 
-✔ Real-Time Summary Statistics
+---
 
-The backend computes:
+### ✔ Data Quality Score (Radial Gauge)
+Instant calculation of dataset quality based on missing/invalid records.
 
-Total rows
+---
 
-Valid rows
+### ✔ Monthly Trend Analytics
+Interactive charts using **ApexCharts**:
+- 📈 Monthly Flowrate  
+- 🌡 Monthly Temperature  
+- ⚙ Monthly Pressure  
 
-Missing values
+Each analysis has a dedicated navigation page.
 
-Invalid entries
+---
 
-Averages of all key parameters
+### ✔ IIT Bombay Branding
+- Institute logo  
+- Custom sidebar  
+- Clean dark/light mode  
+- TailAdmin template fully customized  
 
-Equipment type distribution
+---
 
-These metrics update instantly after each upload.
+### ✔ Hybrid Deployment
+- 🌐 Full Web App (React + Vite + Tailwind)
+- 🖥️ Full Desktop App (PyQt5 + WebEngineView)
+- 🧠 Shared Django REST API backend
 
-✔ Data Quality Score (Radial Gauge)
+---
 
-A live radial chart displays the percentage quality of the uploaded dataset.
+## 🧰 Tech Stack
 
-✔ Monthly Trend Charts
+### **Frontend**
+- React 19  
+- TypeScript  
+- Tailwind CSS  
+- ApexCharts  
+- Zustand  
+- Vite  
 
-Using ApexCharts, the dashboard shows:
+### **Backend**
+- Django  
+- Django REST Framework  
+- Pandas  
+- SQLite  
 
-📈 Monthly Flowrate trend
+### **Desktop**
+- PyQt5  
+- Qt WebEngine (loads React UI natively)
 
-🌡 Monthly Temperature trend
+---
 
-⚙ Monthly Pressure trend
+## 🚀 Getting Started
 
-Each analysis has its own dedicated page in the sidebar.
-
-✔ IIT Bombay Branding
-
-The UI has been redesigned to remove the TailAdmin branding and replace it with the official IIT Bombay logo, visible in:
-
-Sidebar
-
-Mobile header
-
-Navigation
-
-✔ Dark Mode Support
-
-Built-in dark/light theme toggle.
-
-✔ Backend: Django REST Framework
-
-Backend endpoints:
-
-Endpoint	Method	Description
-/api/upload/	POST	Upload CSV & generate summary
-/api/history/?latest=true	GET	Fetch latest processed dataset
-/api/history/	GET	Fetch all dataset history
-✔ Frontend: React + Tailwind
-
-Custom charts & cards
-
-Sidebar navigation
-
-Live state management using Zustand
-
-Responsive layout
-
-File uploader
-
-PDF generation page
-
-📂 Tech Stack
-Frontend
-
-React 19
-
-TypeScript
-
-Tailwind CSS
-
-ApexCharts
-
-Zustand state management
-
-Vite
-
-Backend
-
-Django
-
-Django REST Framework
-
-Pandas
-
-SQLite
-
-🚀 Getting Started
-🔧 Backend Setup (Django)
+### 🔧 Backend Setup (Django)
+```bash
 cd backend
 python -m venv venv
 venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
-
-
-Backend will run on:
-
-http://127.0.0.1:8000
-
-🎨 Frontend Setup (React)
-cd frontend
-npm install
-npm run dev
-
-
-Frontend runs on:
-
-http://localhost:5173
-
-📁 Project Structure
-IIT-B-AIML/
-│
-├── backend/
-│   ├── api/
-│   ├── chemvis_backend/
-│   ├── db.sqlite3
-│   └── manage.py
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── vite.config.ts
-│
-└── README.md
-
-🎓 Developed For
-
-Indian Institute of Technology Bombay
-AI & Machine Learning Program
-
-⭐ Support
-
-If you find this project useful, feel free to star the repository on GitHub!
-
-📝 License
-
-This project is licensed under the MIT License.
